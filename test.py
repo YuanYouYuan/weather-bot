@@ -1,8 +1,7 @@
-import time
-from pygame import mixer # Load the required library
+import speech_recognition as sr
 
-mixer.init()
-mixer.music.load("/home/circle/git-project/weather-bot/hello.mp3")
-mixer.music.play()
-
-time.sleep(3)
+# obtain audio from the microphone
+r = sr.Recognizer()
+with sr.Microphone() as source:
+    print("Say something!")
+    audio = r.listen(source)
