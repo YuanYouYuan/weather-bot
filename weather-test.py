@@ -1,8 +1,12 @@
+# This version is for windows, and there must be a mpv application in this work directory
+
 import forecastio
 from gtts import gTTS
 import subprocess
 
-api_key = "c7899699f9263f3140bb1b15c3fbba84"
+api_key = 'Enter your api key'
+
+# the following coordinate is Taipei/Taiwan
 lat = 25.0391667
 lng =  121.525
 lang = 'zh-TW'
@@ -18,6 +22,6 @@ for data in by_hour.data:
     print(text)
     tts = gTTS(text, lang)
     tts.save(file_name)
-    subprocess.call(['/usr/bin/mpv', file_name])
+    subprocess.call([player, file_name])
     
 
