@@ -6,6 +6,7 @@ The following installation steps is for windows,
 for posix users, 
 it's recomended to use your system package manager.
 
+
 1. Install python3 https://www.python.org/downloads/windows/
 
 Remember to check the option to add the python system variable during the installation.
